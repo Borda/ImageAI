@@ -17,6 +17,7 @@ setup(
     description='A flexible Computer Vision and Deep Learning library for applications and systems.',
     url="https://moses.specpal.science",
     author='Moses Olafenwa and John Olafenwa',
+    author_email='guymodscientist@gmail.com',
     license='MIT',
     packages=['imageai'],
 
