@@ -34,7 +34,7 @@ for eachPrediction, eachProbability in zip(predictions, probabilities):
 
 <p>Sample Result:
     <br>
-    <img src="../../images/4.jpg" style="width: 400px; height: auto;" />
+    <img src="../../sample_images/4.jpg" style="width: 400px; height: auto;" />
     <pre>mechanic : 76.82620286941528
 chef : 10.106072574853897
 waiter : 4.036874696612358

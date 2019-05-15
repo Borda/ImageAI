@@ -42,7 +42,7 @@ for eachPrediction, eachProbability in zip(predictions, probabilities):
 
 </pre></b>
 
-<p>Sample Result: <br><img src="../../images/1.jpg" style="width: 400px; height: auto;" />
+<p>Sample Result: <br><img src="../../sample_images/1.jpg" style="width: 400px; height: auto;" />
     <pre>convertible : 52.459555864334106
 sports_car : 37.61284649372101
 pickup : 3.1751200556755066
@@ -129,9 +129,9 @@ for each_result in results_array:
     <p>Sample Result:</p>
     <br>
     <div style="width: 800px;" >
-          <img src="../../images/1.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
-          <img src="../../images/2.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
-          <img src="../../images/3.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
+          <img src="../../sample_images/1.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
+          <img src="../../sample_images/2.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
+          <img src="../../sample_images/3.jpg" style="width: 200px; height: auto; margin-left: 30px; " />
     </div>
 <pre>
 convertible : 52.459555864334106

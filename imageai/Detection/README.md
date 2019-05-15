@@ -45,9 +45,9 @@ for eachObject in detections:
     <br>
     <div style="width: 600px;" >
           <b><p><i>Input Image</i></p></b>
-          <img src="../../images/image2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="../../sample_images/image2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
           <b><p><i>Output Image</i></p></b>
-          <img src="../../images/yolo.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
+          <img src="../../sample_images/yolo.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
     </div> <br>
 <pre>
 
@@ -167,41 +167,41 @@ for eachObject, eachObjectPath in zip(detections, objects_path):
     <br>
     <div style="width: 600px;" >
           <b><p><i>Input Image</i></p></b>
-          <img src="../../images/image3.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="../../sample_images/image3.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
           <b><p><i>Output Images</i></p></b>
-          <img src="../../images/image3new.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br> <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/dog-1.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+          <img src="../../sample_images/image3new.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br> <div style="width: 180px; margin-left: 10px;" >
+            <img src="../../sample_images/image3new.jpg-objects/dog-1.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>dog</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/motorcycle-3.jpg" style="width: 100px; height: auto; margin-left: 50px; " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/motorcycle-3.jpg" style="width: 100px; height: auto; margin-left: 50px; " /> <br>
             <center><i>motorcycle</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/car-4.jpg" style="width: 100px; height: auto; margin-left: 50px; " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/car-4.jpg" style="width: 100px; height: auto; margin-left: 50px; " /> <br>
             <center><i>car</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/bicycle-5.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/bicycle-5.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>bicycle</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/person-6.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/person-6.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>person</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/person-7.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/person-7.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>person</i></center>
           </div>
           <div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/person-8.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/person-8.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>person</i></center>
           </div><div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/person-9.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/person-9.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>person</i></center>
           </div>
 			<div style="width: 180px; margin-left: 10px;" >
-            <img src="../../images/image3new.jpg-objects/person-10.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
+            <img src="../../sample_images/image3new.jpg-objects/person-10.jpg" style="width: 100px; height: auto; margin-left: 50px;  " /> <br>
             <center><i>person</i></center>
           </div>
 
@@ -283,7 +283,7 @@ for eachObject in detections:
 <p>Result:
     <br>
     <div style="width: 600px;" >
-          <img src="../../images/image3custom.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="../../sample_images/image3custom.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
     </div>
 <br>
 
@@ -322,7 +322,7 @@ detections = detector.detectObjectsFromImage(input_image=os.path.join(execution_
 
 <br> In the above code, we specified that both the object name and percentage probability should not be shown. As you can see in the result below, both the names of the objects and their individual percentage probability is not shown in the detected image. <br>
 <b><p><i>Result</i></p></b>
-          <img src="../../images/nodetails.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="../../sample_images/nodetails.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
 
 
 <br><br>

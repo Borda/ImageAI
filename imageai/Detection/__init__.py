@@ -2295,10 +2295,3 @@ class VideoObjectDetection:
                 raise ValueError(
                     "An error occured. It may be that your input video is invalid. Ensure you specified a proper string value for 'output_file_path' is 'save_detected_video' is not False. "
                     "Also ensure your per_frame, per_second, per_minute or video_complete_analysis function is properly configured to receive the right parameters. ")
-
-
-
-
-
-
-

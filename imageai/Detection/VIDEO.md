@@ -49,12 +49,12 @@ print(video_path)
 
 <div style="width: 600px;" >
           <b><p><i>Input Video (a 1min 24seconds video)</i></p></b>
-          <a href="https://github.com/OlafenwaMoses/ImageAI/blob/master/videos/traffic.mp4" >
-<img src="../../images/video--1.jpg" />
+          <a href="https://github.com/OlafenwaMoses/ImageAI/blob/master/sample_videos/traffic.mp4" >
+<img src="../../sample_images/video--1.jpg" />
 </a>
           <b><p><i>Output Video</i></p></b>
           <a href="https://www.youtube.com/embed/qplVDqOmElI?rel=0" >
-<img src="../../images/video-2.jpg" />
+<img src="../../sample_images/video-2.jpg" />
 </a><p>C:\Users\User\PycharmProjects\ImageAITest\traffic_detected.avi</p>
     </div> <br>
 
@@ -146,7 +146,7 @@ which is the function that allows us to perform detection of custom objects. The
 
 <b><p><i>Output Video</i></p></b>
 <a href="https://www.youtube.com/embed/YfAycAzkwPM?rel=0" >
-<img src="../../images/video-3.jpg" />
+<img src="../../sample_images/video-3.jpg" />
 </a><p>C:\Users\User\PycharmProjects\ImageAITest\traffic_custom_detected.avi</p>
     </div> <br>
 
@@ -312,7 +312,7 @@ The results below are obtained from detections performed on a NVIDIA K80 GPU. Li
 <b><i>Video Length = 1min 24seconds, Detection Speed = "normal" , Minimum Percentage Probability = 50 (default), Detection Time = 29min 3seconds </i></b>
 <div style="width: 600px;" >
 <a href="https://www.youtube.com/embed/qplVDqOmElI?rel=0" >
-<img src="../../images/video-4.jpg" />
+<img src="../../sample_images/video-4.jpg" />
 </a>
    
 
@@ -380,7 +380,7 @@ See the results and link to download the videos below:
 <b><i>Video Length = 1min 24seconds, Detection Speed = "fastest" , Minimum Percentage Probability = 20 , Frame Detection Interval = 5, Detection Time = 2min 18seconds  </i></b>
 <div style="width: 600px;" >
 <a href="https://www.youtube.com/embed/S-jgBTQgbd4?rel=0" >
-<img src="../../images/video-3.jpg" />
+<img src="../../sample_images/video-3.jpg" />
   
 
 </div>

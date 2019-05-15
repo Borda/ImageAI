@@ -1,2 +1,35 @@
-__pycache__
-*.pyc
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# installed libraries
+libs/
+
+# temporary structure
+build/
+output*/
+results/
+temp/
+temporary/
+applications/
+
+# PyCharm
+.idea/
+# Dropbox sync
+.dropbox.attr
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+pytest.*
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+// OS temp files
+Thumbs.db

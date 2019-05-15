@@ -79,7 +79,7 @@ Built with simplicity in mind, <b>ImageAI</b>
 
 <div id="prediction"></div>
 <h3><b><u>Image Prediction</u></b></h3>
-<p><img src="images/1.jpg" style="width: 400px; height: auto;" /> 
+<p><img src="sample_images/1.jpg" style="width: 400px; height: auto;" /> 
     <pre>convertible : 52.459555864334106
 sports_car : 37.61284649372101
 pickup : 3.1751200556755066
@@ -103,9 +103,9 @@ Click the link below to see the full sample codes, explanations and best practic
 <h3><b><u>Object Detection</u></b></h3>
 <div style="width: 600px;" >
           <b><p><i>Input Image</i></p></b></br>
-          <img src="images/image2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="sample_images/image2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
           <b><p><i>Output Image</i></p></b>
-          <img src="images/image2new.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
+          <img src="sample_images/image2new.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
     </div> <br>
 <pre>
 
@@ -145,13 +145,13 @@ Click the link below to see the full sample codes, explanations and best practic
 <p><div style="width: 600px;" >
           <p><i><b>Video Object Detection & Analysis</b></i></p>
 <p><i>Below is a snapshot of a video with objects detected.</i></p>
-          <img src="images/video1.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
+          <img src="sample_images/video1.jpg" style="width: 500px; height: auto; margin-left: 50px; " /> <br>
           <p><i><b>Video Custom Object Detection (Object Tracking)</b></i></p>
             <p><i>Below is a snapshot of a video with only person, bicycle and motorcyle detected.</i></p>
-          <img src="images/video2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /><br>
+          <img src="sample_images/video2.jpg" style="width: 500px; height: auto; margin-left: 50px; " /><br>
           <p><i><b>Video Analysis Visualization </b></i></p>
             <p><i>Below is a visualization of video analysis returned by **ImageAI** into a 'per_second' function.</i></p>
-          <img src="images/video_analysis_visualization.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
+          <img src="sample_images/video_analysis_visualization.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
     </div> <br>
 
 <b>ImageAI</b> provides very convenient and powerful methods
@@ -173,7 +173,7 @@ Click the link to see the full videos, sample codes, explanations and best pract
 <p><br>
     <div style="width: 600px;" >
             <p><i>A sample from the IdenProf Dataset used to train a Model for predicting professionals.</i></p>
-          <img src="images/idenprof.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
+          <img src="sample_images/idenprof.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
     </div> <br>
 
 
@@ -196,7 +196,7 @@ Click the link below to see the guide to preparing training images, sample train
 
 <p>
 <p><i>Prediction from a sample model trained on IdenProf, for predicting professionals</i></p>
-      <img src="images/4.jpg" style="width: 400px; height: auto;" />
+      <img src="sample_images/4.jpg" style="width: 400px; height: auto;" />
     <pre>mechanic : 76.82620286941528
 chef : 10.106072574853897
 waiter : 4.036874696612358

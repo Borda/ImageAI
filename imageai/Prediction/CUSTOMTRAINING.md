@@ -506,7 +506,7 @@ Let us explain the details shown above: <br>
 <h3><b><u>Training on the IdenProf data</u></b></h3>
 <div style="width: 600px;" >
             <p><i>A sample from the IdenProf Dataset used to train a Model for predicting professionals.</i></p>
-          <img src="../../images/idenprof.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
+          <img src="../../sample_images/idenprof.jpg" style="width: 500px; height: auto; margin-left: 50px; " />
 </div> <br>
 Below we provide a sample code to train on <b>IdenProf</b>, a dataset which contains images of 10
  uniformed professionals. The code below will download the dataset and initiate the training: <br> <br>
