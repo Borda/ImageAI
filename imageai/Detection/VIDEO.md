@@ -39,11 +39,11 @@ import os
 execution_path = os.getcwd()
 
 detector = VideoObjectDetection()
-detector.setModelTypeAsRetinaNet()
-detector.setModelPath( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
-detector.loadModel()
+detector.set_model_type_as_retina_net()
+detector.set_model_path( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
+detector.load_model()
 
-video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "traffic.mp4"),
+video_path = detector.detect_objects(input_file_path=os.path.join(execution_path, "traffic.mp4"),
                                 output_file_path=os.path.join(execution_path, "traffic_detected")
                                 , frames_per_second=20, log_progress=True)
 print(video_path)
@@ -71,21 +71,21 @@ execution_path = os.getcwd()
 
 ```python
 detector = VideoObjectDetection()
-detector.setModelTypeAsRetinaNet()
-detector.setModelPath( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
-detector.loadModel()
+detector.set_model_type_as_retina_net()
+detector.set_model_path( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
+detector.load_model()
 ```
 
 In the 4 lines above, we created a new instance of the **VideoObjectDetection** class in the first line, set the model type to RetinaNet in the second line, set the model path to the RetinaNet model file we downloaded and copied to the python file folder in the third line and load the model in the fourth line.
 
 ```python
-video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "traffic.mp4"),
+video_path = detector.detect_objects(input_file_path=os.path.join(execution_path, "traffic.mp4"),
                                 output_file_path=os.path.join(execution_path, "traffic_detected")
                                 , frames_per_second=20, log_progress=True)
 print(video_path)
 ```
 
-In the 2 lines above, we ran the `detectObjectsFromVideo()` function and parse in the path to our video,the path to the new video (without the extension, it saves a .avi video by default) which the function will save, the number of frames per second (fps) that you we desire the output video to have and option to log the progress of the detection in the console. Then the function returns a the path to the saved video which contains boxes and percentage probabilities rendered on objects detected in the video.
+In the 2 lines above, we ran the `detect_objects()` function and parse in the path to our video,the path to the new video (without the extension, it saves a .avi video by default) which the function will save, the number of frames per second (fps) that you we desire the output video to have and option to log the progress of the detection in the console. Then the function returns a the path to the saved video which contains boxes and percentage probabilities rendered on objects detected in the video.
 
 
 
@@ -115,13 +115,13 @@ import os
 execution_path = os.getcwd()
 
 detector = VideoObjectDetection()
-detector.setModelTypeAsRetinaNet()
-detector.setModelPath( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
-detector.loadModel()
+detector.set_model_type_as_retina_net()
+detector.set_model_path( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
+detector.load_model()
 
-custom_objects = detector.CustomObjects(person=True, bicycle=True, motorcycle=True)
+custom_objects = VideoObjectDetection.custom_objects(person=True, bicycle=True, motorcycle=True)
 
-video_path = detector.detectCustomObjectsFromVideo(
+video_path = detector.detect_custom_objects(
                 custom_objects=custom_objects,
                 input_file_path=os.path.join(execution_path, "traffic.mp4"),
                 output_file_path=os.path.join(execution_path, "traffic_custom_detected"),
@@ -131,9 +131,9 @@ print(video_path)
 
 Let us take a look at the part of the code that made this possible.
 ```python
-custom_objects = detector.CustomObjects(person=True, bicycle=True, motorcycle=True)
+custom_objects = VideoObjectDetection.custom_objects(person=True, bicycle=True, motorcycle=True)
 
-video_path = detector.detectCustomObjectsFromVideo(
+video_path = detector.detect_custom_objects(
                 custom_objects=custom_objects, 
                 input_file_path=os.path.join(execution_path, "traffic.mp4"),
                 output_file_path=os.path.join(execution_path, "traffic_custom_detected"),
@@ -141,8 +141,8 @@ video_path = detector.detectCustomObjectsFromVideo(
 ```
 
 In the above code, after loading the model (can be done before loading the model as well), we defined a new variable
-`custom_objects = detector.CustomObjects()`, in which we set its person, car and motorccyle properties equal to **True**.
-This is to tell the model to detect only the object we set to True. Then we call the `detector.detectCustomObjectsFromVideo()`
+`custom_objects = detector.custom_objects()`, in which we set its person, car and motorccyle properties equal to **True**.
+This is to tell the model to detect only the object we set to True. Then we call the `detector.detect_custom_objects()`
 which is the function that allows us to perform detection of custom objects. Then we will set the `custom_objects` value
  to the custom objects variable we defined.
 
@@ -154,7 +154,7 @@ C:\Users\User\PycharmProjects\ImageAITest\traffic_custom_detected.avi
 ### Camera / Live Stream Video Detection
 <div id="camerainputs"></div>
 
-**ImageAI** now allows live-video detection with support for camera inputs. Using **OpenCV**'s `VideoCapture()` function, you can load live-video streams from a device camera, cameras connected by cable or IP cameras, and parse it into **ImageAI**'s `detectObjectsFromVideo()` and `detectCustomObjectsFromVideo()` functions. All features that are supported for detecting objects in a video file is also available for detecting objects in a camera's live-video feed. Find below an example of detecting live-video feed from the device camera.
+**ImageAI** now allows live-video detection with support for camera inputs. Using **OpenCV**'s `VideoCapture()` function, you can load live-video streams from a device camera, cameras connected by cable or IP cameras, and parse it into **ImageAI**'s `detect_objects()` and `detect_custom_objects()` functions. All features that are supported for detecting objects in a video file is also available for detecting objects in a camera's live-video feed. Find below an example of detecting live-video feed from the device camera.
 
 ```python
 from imageai.Detection import VideoObjectDetection
@@ -167,12 +167,12 @@ execution_path = os.getcwd()
 camera = cv2.VideoCapture(0)
 
 detector = VideoObjectDetection()
-detector.setModelTypeAsRetinaNet()
-detector.setModelPath(os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
-detector.loadModel()
+detector.set_model_type_as_retina_net()
+detector.set_model_path(os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
+detector.load_model()
 
 
-video_path = detector.detectObjectsFromVideo(
+video_path = detector.detect_objects(
                 camera_input=camera,
                 output_file_path=os.path.join(execution_path, "camera_detected_video"),
                 frames_per_second=20, log_progress=True, minimum_percentage_probability=40)
@@ -186,12 +186,12 @@ The difference in the code above and the code for the detection of a video file 
 
 **ImageAI** now provide commercial-grade video analysis in the Video Object Detection class, for both video file inputs and camera inputs. This feature allows developers to obtain deep insights into any video processed with **ImageAI**. This insights can be visualized in real-time, stored in a NoSQL database for future review or analysis.
 
-For video analysis, the `detectObjectsFromVideo()` and `detectCustomObjectsFromVideo()` now allows you to state your own defined functions which will be executed for every frame, seconds and/or minute of the video detected as well as a state a function that will be executed at the end of a video detection. Once this functions are stated, they will receive raw but comprehensive analytical data on the index of the frame/second/minute, objects detected (name, percentage_probability and box_points), number of instances of each unique object detected and average number of occurrence of each unique object detected over a second/minute and entire video.
+For video analysis, the `detect_objects()` and `detect_custom_objects()` now allows you to state your own defined functions which will be executed for every frame, seconds and/or minute of the video detected as well as a state a function that will be executed at the end of a video detection. Once this functions are stated, they will receive raw but comprehensive analytical data on the index of the frame/second/minute, objects detected (name, percentage_probability and box_points), number of instances of each unique object detected and average number of occurrence of each unique object detected over a second/minute and entire video.
 
 To obtain the video analysis, all you need to do is specify a function, state the corresponding parameters it will be receiving and parse the function name into the `per_frame_function`, `per_second_function`, `per_minute_function` and `video_complete_function` parameters in the detection function. Find below examples of video analysis functions.
 
 ```python
-def forFrame(frame_number, output_array, output_count):
+def for_frame(frame_number, output_array, output_count):
     print("FOR FRAME " , frame_number)
     print("Output for each object : ", output_array)
     print("Output count for unique objects : ", output_count)
@@ -212,16 +212,16 @@ def forMinute(minute_number, output_arrays, count_arrays, average_output_count):
     print("------------END OF A MINUTE --------------")
 
 video_detector = VideoObjectDetection()
-video_detector.setModelTypeAsYOLOv3()
-video_detector.setModelPath(os.path.join(execution_path, "yolo.h5"))
-video_detector.loadModel()
+video_detector.set_model_type_as_yolo_v3()
+video_detector.set_model_path(os.path.join(execution_path, "yolo.h5"))
+video_detector.load_model()
 
-video_detector.detectObjectsFromVideo(
+video_detector.detect_objects(
     input_file_path=os.path.join(execution_path, "traffic.mp4"),
     output_file_path=os.path.join(execution_path, "traffic_detected"),
     frames_per_second=10,
     per_second_function=forSeconds,
-    per_frame_function=forFrame,
+    per_frame_function=for_frame,
     per_minute_function=forMinute,
     minimum_percentage_probability=30
 )
@@ -283,13 +283,13 @@ In the above result, the video was processed and saved in 10 frames per second (
 The above set of **4 parameters** that are returned for every second of the video processed is the same parameters to that will be returned for every minute of the video processed. The difference is that the index returned corresponds to the minute index, the **output_arrays** is an array that contains the number of FPS * 60  number of arrays (in the code example above, 10 frames per second(fps) * 60 seconds = 600 frames = 600 arrays), and the **count_arrays** is an array that contains the number of FPS * 60  number of dictionaries (in the code example above, 10 frames per second(fps) * 60 seconds = 600 frames = 600 dictionaries) and the **average_output_count** is a dictionary that covers all the objects detected in all the frames contained in the last minute.
 
 **Results for the Video Complete Function**
-**ImageAI** allows you to obtain complete analysis of the entire video processed. All you need is to define a function like the forSecond or forMinute function and set the **video_complete_function** parameter into your `.detectObjectsFromVideo()` or `.detectCustomObjectsFromVideo()` function. The same values for the per_second-function and per_minute_function will be returned. The difference is that no index will be returned and the other 3 values will be returned, and the 3 values will cover all frames in the video. Below is a sample function: 
+**ImageAI** allows you to obtain complete analysis of the entire video processed. All you need is to define a function like the for_second or forMinute function and set the **video_complete_function** parameter into your `.detect_objects()` or `.detect_custom_objects()` function. The same values for the per_second-function and per_minute_function will be returned. The difference is that no index will be returned and the other 3 values will be returned, and the 3 values will cover all frames in the video. Below is a sample function: 
 
 ```python
 def forFull(output_arrays, count_arrays, average_output_count):
     #Perform action on the 3 parameters returned into the function
 
-video_detector.detectObjectsFromVideo(
+video_detector.detect_objects(
     input_file_path=os.path.join(execution_path, "traffic.mp4"),
     output_file_path=os.path.join(execution_path, "traffic_detected"),
     frames_per_second=10,
@@ -298,21 +298,21 @@ video_detector.detectObjectsFromVideo(
 )
 ```
 
-**FINAL NOTE ON VIDEO ANALYSIS** : **ImageAI** allows you to obtain the detected video frame as a Numpy array at each frame, second and minute function. All you need to do is specify one more parameter in your function and set `return_detected_frame=True` in your `detectObjectsFromVideo()` or `detectCustomObjectsFrom()` function. Once this is set, the extra parameter you sepecified in your function will be the Numpy array of the detected frame. See a sample below:
+**FINAL NOTE ON VIDEO ANALYSIS** : **ImageAI** allows you to obtain the detected video frame as a Numpy array at each frame, second and minute function. All you need to do is specify one more parameter in your function and set `return_detected_frame=True` in your `detect_objects()` or `detectCustomObjectsFrom()` function. Once this is set, the extra parameter you sepecified in your function will be the Numpy array of the detected frame. See a sample below:
 
 ```python
-def forFrame(frame_number, output_array, output_count, detected_frame):
+def for_frame(frame_number, output_array, output_count, detected_frame):
     print("FOR FRAME " , frame_number)
     print("Output for each object : ", output_array)
     print("Output count for unique objects : ", output_count)
 	print("Returned Objects is : ", type(detected_frame))
     print("------------END OF A FRAME --------------")
 
-video_detector.detectObjectsFromVideo(
+video_detector.detect_objects(
     input_file_path=os.path.join(execution_path, "traffic.mp4"),
     output_file_path=os.path.join(execution_path, "traffic_detected"),
     frames_per_second=10,
-    per_frame_function=forFrame,
+    per_frame_function=for_frame,
     minimum_percentage_probability=30,
     return_detected_frame=True
 )
@@ -328,7 +328,7 @@ speed and yet reduce detection time drastically. The available detection speeds 
 All you need to do is to state the speed mode you desire when loading the model as seen below.
 
 ```python
-detector.loadModel(detection_speed="fast")
+detector.load_model(detection_speed="fast")
 ```
 
 To observe the differences in the detection speeds, look below for each speed applied to object detection with
@@ -357,7 +357,7 @@ If you use more powerful NVIDIA GPUs, you will definitely have faster detection 
 ### Frame Detection Intervals
 <div id="videodetectionintervals" ></div>
 
-The above video objects detection task are optimized for frame-real-time object detections that ensures that objects in every frame of the video is detected. **ImageAI** provides you the option to adjust the video frame detections which can speed up your video detection process. When calling the `.detectObjectsFromVideo()` or `.detectCustomObjectsFromVideo()`, you can specify at which frame interval detections should be made. By setting the **frame_detection_interval** parameter to be  equal to 5 or 20, that means the object detections in the video will be updated after 5 frames or 20 frames.
+The above video objects detection task are optimized for frame-real-time object detections that ensures that objects in every frame of the video is detected. **ImageAI** provides you the option to adjust the video frame detections which can speed up your video detection process. When calling the `.detect_objects()` or `.detect_custom_objects()`, you can specify at which frame interval detections should be made. By setting the **frame_detection_interval** parameter to be  equal to 5 or 20, that means the object detections in the video will be updated after 5 frames or 20 frames.
 If your output video **frames_per_second** is set to 20, that means the object detections in the video will be updated once in every quarter of a second or every second. This is useful in case scenarious where the available compute is less powerful and speeds of moving objects are low. This ensures you can have objects detected as second-real-time , half-a-second-real-time or whichever way suits your needs. We conducted video object detection on the same input video we have been using all this while by applying a **frame_detection_interval** value equal to 5.
 The results below are obtained from detections performed on a NVIDIA K80 GPU.
 See the results and link to download the videos below:

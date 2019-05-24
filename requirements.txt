@@ -5,8 +5,9 @@ opencv-python
 Pillow
 matplotlib
 h5py
-keras>=2.0.0
+keras>=2.0.0, <=2.0.8  # due to some runtime issue
 scikit-learn
 six
 pycocotools
 click
+pandas
